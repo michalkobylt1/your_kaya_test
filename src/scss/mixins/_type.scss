@@ -1,0 +1,59 @@
+@mixin h1() {
+    line-height: 1.185;
+    font-family: "Manner", serif;
+    font-weight: 600;
+
+    @media (max-width: 750px) {
+        font-size: 1.5rem;
+    }
+    
+    @media (min-width: 1200px) {
+        font-size: 8rem;
+    }
+}
+
+@mixin h2() {
+    font-size: 1.5rem;
+    line-height: 1.2;
+    font-family: "Manner", serif;
+    font-weight: 600;
+
+    @media (min-width: 750px) {
+        font-size: 1.5rem;
+    }
+    
+    @media (min-width: 1200px) {
+        font-size: 2.3125rem;
+    }
+}
+
+@mixin h3() {
+    font-family: "Manner", serif;
+}
+
+@mixin h4() {
+    font-family: "Manner", serif;
+}
+
+@mixin h5() {
+    font-family: "Manner", serif;
+}
+
+@mixin h6() {
+    font-family: "Manner", serif;
+}
+
+@mixin p() {
+    font-family: "Manner", serif;
+}
+
+@mixin default() {
+    font-family: "Mabry", sans-serif;
+    font-size: .75rem;
+    line-height: 1.4;
+    letter-spacing: 0.03em;
+    font-weight: 400;
+    // font-size: .875rem;
+    // line-height: 1.31;
+    // letter-spacing: 0.0045em;
+}

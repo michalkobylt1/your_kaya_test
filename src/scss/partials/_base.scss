@@ -1,0 +1,71 @@
+body {
+    background-color: $light-gray;
+    color: $black;
+    hyphens: auto;
+    
+    @include default();
+}
+
+.main-content {
+    width: 100%;
+    max-width: var(--page-width);
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: calc(-1 * var(--header-height));
+
+    &.off-margin-top {
+        margin-top: 0;
+    }
+
+    &.big-margin-top {
+        margin-top: 0;
+        
+        @media (min-width: 750px) {
+            margin-top: 7.1875rem;
+        }
+
+        @media (min-width: 990px) {
+            margin-top: 8.125rem;
+        }
+    }
+}
+
+.position-relative {
+    position: relative;
+}
+
+.no-margin {
+    margin: 0 !important;
+}
+
+.shopify-section {
+    position: relative;
+}
+
+.mobile-hidden {
+    display: none;
+
+    @media (min-width: 750px) {
+        display: block;
+    }
+}
+
+.desktop-hidden {
+    @media (min-width: 750px) {
+        display: none !important;
+    }
+}
+
+strong {
+    font-weight: 400;
+}
+
+*:focus-visible {
+    outline: 0.2rem solid rgba($blue,.5) !important;
+    outline-offset: 0 !important;
+    box-shadow: none !important;
+}
+
+.grecaptcha-badge {
+    visibility: hidden;
+}

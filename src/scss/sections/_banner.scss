@@ -1,0 +1,118 @@
+.banner {
+    text-decoration: none;
+
+    &--75vh_adapt {
+        @media (min-width: 750px) {
+            height: calc(100vh - 11.25rem);
+        }
+    }
+    
+    &--screen_adapt {
+        @media (min-width: 750px) {
+            height: 100vh;
+        }
+    }
+
+    &--mobile-adapt {
+        @media (max-width: 749px) {
+            height: auto;
+        }
+    }
+
+    &--mobile-75vh_adapt {
+        @media (max-width: 749px) {
+            height: calc(100vh - 7rem);
+        }
+    }
+
+    &--mobile-screen_adapt {
+        @media (max-width: 749px) {
+            height: 100vh;
+        }
+    }
+
+    .banner__heading {
+        color: $white;
+        font-weight: 600;
+    }
+
+    &__media {
+        .banner__media-image {
+            &--desktop {
+                display: none !important;
+                
+                @media (min-width: 750px) {
+                    display: block !important;
+                }
+            }
+
+            &--mobile {
+                display: block !important;
+
+                @media (min-width: 750px) {
+                    display: none !important;
+                }
+            }
+        }
+
+        video {
+            object-fit: cover;
+        }
+    }
+
+    &__content {
+        padding: .625rem;
+
+        @media (min-width: 750px) {
+            padding: 1rem;
+        }
+
+        .banner__box {
+            padding: 0;
+            width: 100%;
+            height: auto;
+
+            @media (min-width: 750px) {
+                max-width: 100%;
+                min-width: 0;
+            }
+
+            img {
+                margin-top: 2.5rem;
+                margin-bottom: 2.5rem;
+                height: auto;
+
+                @media (min-width: 750px) {
+                    margin: 0;
+                }
+
+                &.banner__svg {
+                    width: var(--mobile-width);
+                    transform: translateX(var(--mobile-offset));
+
+                    @media (min-width: 750px) {
+                        width: var(--width);
+                        transform: translateX(var(--offset));
+                    }
+
+
+                    &--desktop {
+                        display: none;
+
+                        @media (min-width: 750px) {
+                            display: inline-block;
+                        }
+                    }
+
+                    &--mobile {
+                        display: inline-block;
+
+                        @media (min-width: 750px) {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

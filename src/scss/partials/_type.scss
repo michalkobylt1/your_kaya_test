@@ -1,0 +1,31 @@
+@font-face {
+    font-family: 'Manner';
+    src: url('manner-variable-proportional-pro.woff2') format('woff2'),
+        url('manner-variable-proportional-pro.woff') format('woff'),
+        url('manner-variable-proportional-pro.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Mabry';
+    src: url('mabry-regular-pro.woff2') format('woff2'),
+        url('mabry-regular-pro.woff') format('woff'),
+        url('mabry-regular-pro.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+h1,
+.h1 {
+    @include h1();
+}
+
+h2,
+.h2 {
+    @include h2();
+}
+
+.default {
+    @include default();
+}

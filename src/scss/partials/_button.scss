@@ -1,0 +1,25 @@
+@mixin button() {
+    min-width: 0;
+    min-height: 3.125rem;
+    padding: 0 1rem;
+    transition: background-color .2s ease;
+
+    @include default();
+
+    &::before,
+    &::after {
+        content: none;
+    }
+
+    &:hover {
+        background-color: $blue;
+    }
+}
+
+.button {
+    @include button();
+
+    &-label {
+        @include default();
+    }
+}
