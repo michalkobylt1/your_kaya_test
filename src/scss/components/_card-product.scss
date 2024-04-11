@@ -1,10 +1,18 @@
 .card-wrapper {
     .card {
+        &--media {
+            .card__inner {
+                .card__content {
+                    padding: 12px;
+                }
+            }
+        }
+        
         &__information {
             display: flex;
             flex-direction: column;
             padding-top: 20px;
-            padding-bottom: 20px;
+            padding-bottom: 0;
         }
 
         &__heading {
@@ -19,11 +27,15 @@
         
         &__excerpt {
             margin-top: 12px;
-            margin-bottom: 0;
+            margin-bottom: 45px;
 
             font-size: 13px;
             line-height: 1.2;
             letter-spacing: -0.02em;
+        }
+
+        &__badge {
+            display: flex;
         }
 
         .card-information {
@@ -31,7 +43,7 @@
             
             > .price {
                 &:not(.rating):not(.card__information-volume-pricing-note) {
-                    margin-top: 22px;
+                    margin-top: 0;
                 }
     
                 &__regular {
@@ -44,11 +56,12 @@
                     font-size: 15px;
                     color: $black;
                     font-weight: medium;
+
+                    .price-item--regular {
+                        color: $gray;
+                    }
                 }
             }
         }
-
-        // .card-information > *:not(.visually-hidden:first-child) + *:not(.rating):not(.card__information-volume-pricing-note)
-        
     }
 }

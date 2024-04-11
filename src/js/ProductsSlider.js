@@ -1,4 +1,6 @@
-import Swiper from 'swiper';
+import Swiper, { Navigation } from 'swiper';
+
+Swiper.use([Navigation]);
 
 class ProductsSlider {
   constructor() {
@@ -7,7 +9,7 @@ class ProductsSlider {
 
     this.sliders.forEach(productsSlider => {
       let slider = new Swiper(productsSlider, {
-        slidesPerView: 4,
+        slidesPerView: 1.33,
         loop: false,
         speed: 500,
         observer: true,
@@ -16,6 +18,14 @@ class ProductsSlider {
         navigation: {
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev",
+        },
+        breakpoints: {
+          768: {
+            slidesPerView: 2.5
+          },
+          1200: {
+            slidesPerView: 4.55
+          }
         },
       });
 

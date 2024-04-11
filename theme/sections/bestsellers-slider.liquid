@@ -41,15 +41,13 @@
                 {%- if section.settings.link_url != blank -%}
                     
                     <a href="{{ section.settings.link_url }}" class="bestsellers-slider__top-link">
+                        
                         {% if section.settings.link_text != blank %}
-
-                            {{ section.settings.link_url.title }}
-
-                        {% else %}
 
                             {{ section.settings.link_text }}
 
                         {% endif %}
+                        
                     </a>
 
                 {%- endif -%}
@@ -77,9 +75,35 @@
                     {% endfor %}
         
                 </div>        
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
+                <div class="bestsellers-slider__arrow-container bestsellers-slider__arrow-container--prev">
+                    <div class="bestsellers-slider__arrow bestsellers-slider__arrow--prev swiper-button-prev">
+                        <svg width="11" height="18" viewBox="0 0 11 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.75 1.41666L9.33333 8.99999L1.75 16.5833" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="bestsellers-slider__arrow-container bestsellers-slider__arrow-container--next">
+                    <div class="bestsellers-slider__arrow bestsellers-slider__arrow--next swiper-button-next">
+                        <svg width="11" height="18" viewBox="0 0 11 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.75 1.41666L9.33333 8.99999L1.75 16.5833" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                </div>
             </div>
+
+            {%- if section.settings.link_url != blank -%}
+                    
+                <a href="{{ section.settings.link_url }}" class="bestsellers-slider__mobile-link">
+                    
+                    {% if section.settings.link_text != blank %}
+
+                        {{ section.settings.link_text }}
+
+                    {% endif %}
+                    
+                </a>
+
+            {%- endif -%}
 
         {% endif %}
 

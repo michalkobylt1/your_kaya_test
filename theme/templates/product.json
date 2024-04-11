@@ -86,9 +86,9 @@
     "bestsellers_slider_dKB8Mz": {
       "type": "bestsellers-slider",
       "settings": {
-        "heading": "Bestsellers",
+        "heading": "Polecane dla Ciebie",
         "heading_size": "h1",
-        "link_text": "See all",
+        "link_text": "Zobacz wszystkie",
         "link_url": "shopify:\/\/collections\/frontpage",
         "products_to_show": 10,
         "columns_desktop": 4,

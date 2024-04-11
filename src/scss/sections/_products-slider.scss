@@ -3,7 +3,34 @@
 }
 
 .bestsellers-slider {
+    &__top {
+        display: flex;
+        align-items: center;
+        margin-bottom: 52px;
+
+        &-heading {
+            margin: 0;
+        }
+
+        &-link {
+            margin-left: auto;
+            
+            @include button();
+        }
+    }
+    
+    &__mobile-link {
+        margin-top: 48px;
+        
+        @include button();
+
+        @media (min-width: 768px) {
+            display: none;
+        }
+    }
+
     &__el {
+        position: relative;
         margin: 0 -12px;
     }
 
@@ -13,9 +40,83 @@
     }
 
     &__item {
-        width: 25%;
         flex-grow: 0;
         flex-shrink: 0;
         padding: 0 12px;
+    }
+
+    &__arrow-container {
+        position: absolute;
+        top: 0;
+        width: 75%;
+        z-index: 2;
+        pointer-events: none;
+        padding: 0 12px;
+
+        @media (min-width: 768px) {
+            width: 50%;
+        }
+
+        @media (min-width: 1200px) {
+            width: 25%;
+        }
+
+        &--next {
+            right: 0;
+        }
+
+        &--left {
+            left: 0;
+        }
+
+        &::after {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 0;
+            padding-bottom: 133%;
+        }
+    }
+
+    &__arrow {
+        position: absolute;
+        top: 50%;
+        width: 64px;
+        height: 64px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $white;
+        border-radius: 50%;
+        transform: translateY(-50%);
+        box-shadow: 10px 10px 24px -10px rgba(91, 91, 91, 0.25);
+        cursor: pointer;
+        pointer-events: auto;
+        transition: all .3s ease;
+
+        &.swiper-button-disabled {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        &--prev {
+            left: 12px;
+
+            svg {
+                transform: rotate(-180deg);
+            }
+
+            &:hover {
+                transform: translate(-4px, -50%);
+            }
+        }
+
+        &--next {
+            right: 12px;
+
+            &:hover {
+                transform: translate(4px, -50%);
+            }
+        }
     }
 }
