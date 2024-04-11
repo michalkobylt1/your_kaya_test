@@ -8,8 +8,11 @@ class ProductsSlider {
     this.sliders = document.querySelectorAll('.js-products-slider');
 
     this.sliders.forEach(productsSlider => {
+      const slidesPerViewDesktop = productsSlider.getAttribute('data-items-count');
+      const slidesPerViewMobile = productsSlider.getAttribute('data-items-count-mobile');
+
       let slider = new Swiper(productsSlider, {
-        slidesPerView: 1.33,
+        slidesPerView: slidesPerViewMobile ? slidesPerViewMobile : 1.33,
         loop: false,
         speed: 500,
         observer: true,
@@ -21,10 +24,10 @@ class ProductsSlider {
         },
         breakpoints: {
           768: {
-            slidesPerView: 2.5
+            slidesPerView: slidesPerViewDesktop ? slidesPerViewDesktop / 2 : 2.5
           },
           1200: {
-            slidesPerView: 4.55
+            slidesPerView: slidesPerViewDesktop ? slidesPerViewDesktop : 4.55
           }
         },
       });

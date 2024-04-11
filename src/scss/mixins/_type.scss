@@ -1,13 +1,9 @@
 @mixin h2() {
-    font-size: 24px;
+    font-size: 3.6rem;
     letter-spacing: -0.02em;
     font-weight: normal;
 
     @media (max-width: 750px) {
-        font-size: 32px;
-    }
-    
-    @media (min-width: 1200px) {
-        font-size: 40px;
+        font-size: 4rem;
     }
 }

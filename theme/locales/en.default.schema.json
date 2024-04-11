@@ -2838,7 +2838,7 @@
           "label": "Maximum products to show"
         },
         "columns_desktop": {
-          "label": "Number of columns on desktop"
+          "label": "Number of slides(products) per page"
         },
         "image_ratio": {
           "label": "Image ratio",
@@ -2869,7 +2869,7 @@
           "content": "Mobile Layout"
         },
         "columns_mobile": {
-          "label": "Number of columns on mobile",
+          "label": "Number of slides(products) per page on mobile",
           "options__1": {
             "label": "1 column"
           },

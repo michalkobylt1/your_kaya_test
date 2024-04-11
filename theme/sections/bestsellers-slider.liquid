@@ -20,11 +20,18 @@
   }
 {%- endstyle -%}
 
-{% comment %} product.collections[0] in order to pick the first product collection (in case it has many) {% endcomment %}
-{% assign product_collection = product.collections[0] %}
 
-{% comment %} collection is sorting products by "best selling", so the first ones will be our bestsellers {% endcomment %}
-{% assign bestsellers = product_collection.products|limit:10 %}
+{% comment %} 
+    product.collections.first in order to pick the first collection, 
+    in case the product was assigned to more than one collection
+{% endcomment %}
+{% assign product_collection = product.collections.first %}
+
+{% comment %} 
+    the products in the collection are sorted by "best selling", 
+    so the first ones will be our bestsellers
+{% endcomment %}
+{% assign bestsellers = product_collection.products|limit:section.settings.products_to_show %}
 
 <div class="bestsellers-slider-wrapper color-{{ section.settings.color_scheme }} gradient no-js-hidden">
     <div class="bestsellers-slider page-width section-{{ section.id }}-padding isolate{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
@@ -53,7 +60,7 @@
                 {%- endif -%}
             </div>
 
-            <div class="js-products-slider bestsellers-slider__el">
+            <div class="js-products-slider bestsellers-slider__el" data-items-count="{{section.settings.columns_desktop}}" data-items-count-mobile="{{section.settings.columns_mobile}}">
                 <div class="swiper-wrapper bestsellers-slider__wrapper">
                     
                     {% for product in bestsellers %}
@@ -76,18 +83,18 @@
         
                 </div>        
                 <div class="bestsellers-slider__arrow-container bestsellers-slider__arrow-container--prev">
-                    <div class="bestsellers-slider__arrow bestsellers-slider__arrow--prev swiper-button-prev">
+                    <a href="#" class="bestsellers-slider__arrow bestsellers-slider__arrow--prev swiper-button-prev">
                         <svg width="11" height="18" viewBox="0 0 11 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M1.75 1.41666L9.33333 8.99999L1.75 16.5833" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
-                    </div>
+                    </a>
                 </div>
                 <div class="bestsellers-slider__arrow-container bestsellers-slider__arrow-container--next">
-                    <div class="bestsellers-slider__arrow bestsellers-slider__arrow--next swiper-button-next">
+                    <a href="#" class="bestsellers-slider__arrow bestsellers-slider__arrow--next swiper-button-next">
                         <svg width="11" height="18" viewBox="0 0 11 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M1.75 1.41666L9.33333 8.99999L1.75 16.5833" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
-                    </div>
+                    </a>
                 </div>
             </div>
 
@@ -110,46 +117,13 @@
     </div>
 </div>
 
-{% comment %} <div class="color-{{ section.settings.color_scheme }} gradient no-js-hidden">
-  <product-recommendations
-    class="related-products page-width section-{{ section.id }}-padding isolate{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
-    data-url="{{ routes.product_recommendations_url }}?section_id={{ section.id }}&product_id={{ product.id }}&limit={{ section.settings.products_to_show }}"
-  >
-    {% if recommendations.performed and recommendations.products_count > 0 %}
-      <h2 class="related-products__heading inline-richtext {{ section.settings.heading_size }}">
-        {{ section.settings.heading }}
-      </h2>
-      <ul
-        class="grid product-grid grid--{{ section.settings.columns_desktop }}-col-desktop grid--{{ section.settings.columns_mobile }}-col-tablet-down"
-        role="list"
-      >
-        {% for recommendation in recommendations.products %}
-          <li class="grid__item">
-            {% render 'card-product',
-              card_product: recommendation,
-              media_aspect_ratio: section.settings.image_ratio,
-              image_shape: section.settings.image_shape,
-              show_secondary_image: section.settings.show_secondary_image,
-              show_vendor: section.settings.show_vendor,
-              show_rating: section.settings.show_rating
-            %}
-          </li>
-        {% endfor %}
-      </ul>
-    {% endif %}
-  </product-recommendations>
-  {% if section.settings.image_shape == 'arch' %}
-    {% render 'mask-arch' %}
-  {%- endif -%}
-</div> {% endcomment %}
-
 {% schema %}
 {
   "name": "t:sections.bestsellers-slider.name",
   "tag": "section",
   "class": "section",
-  "disabled_on": {
-    "groups": ["header", "footer"]
+  "enabled_on": {
+    "templates": ["product"]
   },
   "settings": [
     {
@@ -203,7 +177,7 @@
       "id": "columns_desktop",
       "min": 1,
       "max": 5,
-      "step": 1,
+      "step": 0.1,
       "default": 4,
       "label": "t:sections.bestsellers-slider.settings.columns_desktop.label"
     },
@@ -309,7 +283,7 @@
       "label": "t:sections.bestsellers-slider.settings.columns_mobile.label",
       "options": [
         {
-          "value": "1",
+          "value": "1.55",
           "label": "t:sections.bestsellers-slider.settings.columns_mobile.options__1.label"
         },
         {

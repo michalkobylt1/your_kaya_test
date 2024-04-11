@@ -3,7 +3,7 @@
         &--media {
             .card__inner {
                 .card__content {
-                    padding: 12px;
+                    padding: 1.2rem;
                 }
             }
         }
@@ -11,25 +11,27 @@
         &__information {
             display: flex;
             flex-direction: column;
-            padding-top: 20px;
+            padding-top: 2rem;
             padding-bottom: 0;
         }
 
         &__heading {
-            margin-top: 8px;
+            margin-top: .8rem;
+            padding-right: 2rem;
 
             font-family: 'Satoshi', sans-serif;
-            font-size: 20px;
+            font-size: 2rem;
             line-height: 1.14;
             letter-spacing: -0.02em;
             font-weight: normal;
         }
         
         &__excerpt {
-            margin-top: 12px;
-            margin-bottom: 45px;
+            margin-top: 1.2rem;
+            margin-bottom: 2.2rem;
+            padding-right: 2rem;
 
-            font-size: 13px;
+            font-size: 1.3rem;
             line-height: 1.2;
             letter-spacing: -0.02em;
         }
@@ -41,24 +43,30 @@
         .card-information {
             margin-top: auto;
             
-            > .price {
+            .price {
                 &:not(.rating):not(.card__information-volume-pricing-note) {
                     margin-top: 0;
                 }
     
                 &__regular {
-                    font-size: 16px;
-                    line-height: 1.2;
-                    font-weight: bold;
+                    .price-item--regular {
+                        font-size: 1.6rem;
+                        line-height: 1.2;
+                        font-weight: bold;
+                    }
                 }
                 
                 &__sale {
-                    font-size: 15px;
-                    color: $black;
-                    font-weight: medium;
+                    .price-item--sale {
+                        font-size: 1.6rem;
+                        color: $black;
+                        font-weight: bold;
+                    }
 
                     .price-item--regular {
+                        font-size: 1.5rem;
                         color: $gray;
+                        font-weight: normal;
                     }
                 }
             }
