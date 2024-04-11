@@ -1,5 +1,5 @@
-import Accordions from './Accordions';
+import ProductsSlider from './ProductsSlider';
 
 document.addEventListener('DOMContentLoaded', () => {
-    //
+    // random stuff
 });

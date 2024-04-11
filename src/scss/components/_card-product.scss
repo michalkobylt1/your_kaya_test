@@ -1,0 +1,54 @@
+.card-wrapper {
+    .card {
+        &__information {
+            display: flex;
+            flex-direction: column;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        &__heading {
+            margin-top: 8px;
+
+            font-family: 'Satoshi', sans-serif;
+            font-size: 20px;
+            line-height: 1.14;
+            letter-spacing: -0.02em;
+            font-weight: normal;
+        }
+        
+        &__excerpt {
+            margin-top: 12px;
+            margin-bottom: 0;
+
+            font-size: 13px;
+            line-height: 1.2;
+            letter-spacing: -0.02em;
+        }
+
+        .card-information {
+            margin-top: auto;
+            
+            > .price {
+                &:not(.rating):not(.card__information-volume-pricing-note) {
+                    margin-top: 22px;
+                }
+    
+                &__regular {
+                    font-size: 16px;
+                    line-height: 1.2;
+                    font-weight: bold;
+                }
+                
+                &__sale {
+                    font-size: 15px;
+                    color: $black;
+                    font-weight: medium;
+                }
+            }
+        }
+
+        // .card-information > *:not(.visually-hidden:first-child) + *:not(.rating):not(.card__information-volume-pricing-note)
+        
+    }
+}

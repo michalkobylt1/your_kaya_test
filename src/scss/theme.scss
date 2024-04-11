@@ -11,6 +11,11 @@
 // @import '../node_modules/bootstrap/scss/bootstrap-utilities';
 
 // --------------------------------------------------
+// global
+
+@import 'global';
+
+// --------------------------------------------------
 // mixins
 
 @import 'mixins/helpers';
@@ -26,7 +31,9 @@
 // --------------------------------------------------
 // sections
 
-@import 'sections/banner';
+@import 'sections/products-slider';
 
 // --------------------------------------------------
-// snippets
+// components
+
+@import 'components/card-product';

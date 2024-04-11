@@ -2822,6 +2822,66 @@
         }
       }
     },
+    "bestsellers-slider": {
+      "name": "Bestsellers slider",
+      "settings": {
+        "heading": {
+          "label": "Heading"
+        },
+        "link_text": {
+          "label": "Link text"
+        },
+        "link_url": {
+          "label": "Link url"
+        },
+        "products_to_show": {
+          "label": "Maximum products to show"
+        },
+        "columns_desktop": {
+          "label": "Number of columns on desktop"
+        },
+        "image_ratio": {
+          "label": "Image ratio",
+          "options__1": {
+            "label": "Adapt to image"
+          },
+          "options__2": {
+            "label": "Portrait"
+          },
+          "options__3": {
+            "label": "Square"
+          }
+        },
+        "header__2": {
+          "content": "Product card"
+        },
+        "show_secondary_image": {
+          "label": "Show second image on hover"
+        },
+        "show_vendor": {
+          "label": "Show vendor"
+        },
+        "show_rating": {
+          "label": "Show product rating",
+          "info": "To display a rating, add a product rating app. [Learn more](https:\/\/help.shopify.com\/manual\/online-store\/themes\/theme-structure\/page-types#product-recommendations-section-settings)"
+        },
+        "header_mobile": {
+          "content": "Mobile Layout"
+        },
+        "columns_mobile": {
+          "label": "Number of columns on mobile",
+          "options__1": {
+            "label": "1 column"
+          },
+          "options__2": {
+            "label": "2 columns"
+          }
+        }
+      },
+      "presets": {
+        "name": "Bestsellers slider"
+      }
+    },
     "rich-text": {
       "name": "Rich text",
       "settings": {

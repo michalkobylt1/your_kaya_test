@@ -15,6 +15,11 @@
           "settings": {
           }
         },
+        "bb550bdf-9a54-4398-a49a-0bbef99c4119": {
+          "type": "shopify:\/\/apps\/ali-reviews\/blocks\/widget-star-rating\/bf2eea72-0400-4db1-8908-44b7418f9a88",
+          "settings": {
+          }
+        },
         "price": {
           "type": "price",
           "settings": {
@@ -54,6 +59,7 @@
       "block_order": [
         "vendor",
         "title",
+        "bb550bdf-9a54-4398-a49a-0bbef99c4119",
         "price",
         "variant_picker",
         "quantity_selector",
@@ -77,6 +83,26 @@
         "padding_bottom": 12
       }
     },
+    "bestsellers_slider_dKB8Mz": {
+      "type": "bestsellers-slider",
+      "settings": {
+        "heading": "Bestsellers",
+        "heading_size": "h1",
+        "link_text": "See all",
+        "link_url": "shopify:\/\/collections\/frontpage",
+        "products_to_show": 10,
+        "columns_desktop": 4,
+        "color_scheme": "",
+        "image_ratio": "portrait",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": true,
+        "columns_mobile": "2",
+        "padding_top": 100,
+        "padding_bottom": 36
+      }
+    },
     "related-products": {
       "type": "related-products",
       "settings": {
@@ -89,7 +115,7 @@
         "image_shape": "default",
         "show_secondary_image": true,
         "show_vendor": false,
-        "show_rating": false,
+        "show_rating": true,
         "columns_mobile": "2",
         "padding_top": 36,
         "padding_bottom": 28
@@ -98,6 +124,7 @@
   },
   "order": [
     "main",
+    "bestsellers_slider_dKB8Mz",
     "related-products"
   ]
 }

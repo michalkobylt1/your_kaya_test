@@ -45,10 +45,6 @@
       "sass": "^1.55.0"
   },
   "dependencies": {
-      "air-datepicker": "^3.3.5",
-      "just-validate": "^4.2.0",
-      "perfect-scrollbar": "^1.5.5",
-      "sticky-sidebar": "^3.3.1",
       "swiper": "^8.3.1"
   }
 }

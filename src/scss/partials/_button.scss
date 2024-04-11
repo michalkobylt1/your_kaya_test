@@ -4,22 +4,16 @@
     padding: 0 1rem;
     transition: background-color .2s ease;
 
-    @include default();
-
     &::before,
     &::after {
         content: none;
     }
 
     &:hover {
-        background-color: $blue;
+        background-color: $black;
     }
 }
 
 .button {
     @include button();
-
-    &-label {
-        @include default();
-    }
 }

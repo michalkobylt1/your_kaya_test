@@ -728,7 +728,8 @@
 
     <script type="application/ld+json">
       {
-        "@context": "http://schema.org/",
+        "@context": "http://schema.org/", 
+ {{ product.metafields.alireviews.seo_rating_review_key_script }}
         "@type": "Product",
         "name": {{ product.title | json }},
         "url": {{ request.origin | append: product.url | json }},

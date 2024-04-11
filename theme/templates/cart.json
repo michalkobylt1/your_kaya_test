@@ -31,10 +31,27 @@
         "padding_top": 20,
         "padding_bottom": 40
       }
+    },
+    "alireviews-section-48784a7c-f7bc-4a4d-aadf-22f3b4a27ecc": {
+      "type": "apps",
+      "blocks": {
+        "0a6fcccc-96cd-4fe9-a1ea-f50291769611": {
+          "type": "shopify:\/\/apps\/ali-reviews\/blocks\/widget-box-in-cart\/bf2eea72-0400-4db1-8908-44b7418f9a88",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "0a6fcccc-96cd-4fe9-a1ea-f50291769611"
+      ],
+      "settings": {
+        "include_margins": true
+      }
     }
   },
   "order": [
     "cart-items",
-    "cart-footer"
+    "cart-footer",
+    "alireviews-section-48784a7c-f7bc-4a4d-aadf-22f3b4a27ecc"
   ]
 }

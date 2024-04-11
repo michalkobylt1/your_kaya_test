@@ -1,0 +1,14 @@
+.alireviews-review-star-rating {
+    .alr-wh-star-rating-average-number {
+        display: none;
+    }
+
+    div.alr-wh-star-rating {
+        display: block;
+        padding-bottom: 0;
+
+        .alr-wh-star-rating-list {
+            margin-bottom: 0;
+        }
+    }
+}
